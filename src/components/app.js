@@ -100,10 +100,10 @@ export default class App extends Component {
 
 
                         <Switch>
-                            <Route exact path="/" component={Home} />
+                            <Route exact path="/portfolio-site" component={Home} />
 
                             <Route 
-                                path="/auth"
+                                path="/portfolio-site/auth"
                                 render={props => (
                                     <Auth
                                         {...props}
@@ -113,10 +113,9 @@ export default class App extends Component {
                                 )}
                             />
 
-                            <Route path="/about-me" component={About} />
-                            <Route path="/contact" component={Contact} />
-                            <Route exact path="/portfolio/:slug"  />
-                            <Route path="/blog" component={Blog} />
+                            <Route path="/portfolio-site/about-me" component={About} />
+                            <Route path="/portfolio-site/contact" component={Contact} />
+                            <Route path="/portfolio-site/blog" component={Blog} />
                             {this.state.loggedInStatus === "LOGGED_IN" ? this.authorizedPages() : null}
                             <Route component={NoMatch} />
                         </Switch>
