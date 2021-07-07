@@ -117,7 +117,6 @@ export default class App extends Component {
                             <Route path="/portfolio-site/contact" component={Contact} />
                             <Route path="/portfolio-site/blog" component={Blog} />
                             {this.state.loggedInStatus === "LOGGED_IN" ? this.authorizedPages() : null}
-                            <Route component={NoMatch} />
                         </Switch>
                     </div>
                 </Router>
