@@ -69,10 +69,18 @@ body {
   border-bottom-color: #149414;
 }
 
+.page-wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
 .header-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  background: url(/static/assets/images/heading-background.jpg);
 }
 
 .header-wrapper .header-text {
@@ -87,12 +95,8 @@ body {
 }
 
 .content-wrapper {
-  display: grid;
-  grid-template-columns: 1fr;
-}
-
-.content-wrapper .about-section {
-  margin: 10px 200px;
+  max-width: 1000px;
+  padding: 10px;
 }
 
 .content-wrapper .about-section .about-content-wrapper {
@@ -105,8 +109,54 @@ body {
   width: 100%;
 }
 
-.content-wrapper .project-section {
-  margin: 10px 200px;
+.content-wrapper .project-wheel {
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+}
+
+.content-wrapper .contact-section .social-links {
+  display: grid;
+  grid-template-columns: -webkit-max-content -webkit-max-content;
+  grid-template-columns: max-content max-content;
+  grid-gap: 20px;
+}
+
+.content-wrapper .contact-section .contact-me-form {
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.content-wrapper .contact-section .contact-me-form .form-element-div {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.content-wrapper .contact-section .contact-me-form .form-element-div input, .content-wrapper .contact-section .contact-me-form .form-element-div textarea {
+  font-size: 1.5em;
+  padding: 5px;
+}
+
+.content-wrapper .contact-section .contact-me-form .form-element-div input:focus, .content-wrapper .contact-section .contact-me-form .form-element-div textarea:focus {
+  outline: none;
+  border: none;
+  box-shadow: 0 0 10px #149414;
+}
+
+.content-wrapper .contact-section .contact-me-form .form-element-div:nth-child(3) {
+  grid-column-start: span 2;
+}
+
+.content-wrapper .contact-section .contact-me-form #submit {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  font-size: 1.5em;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #3a5441;
 }
 
 .content-wrapper .project-section .project-preview-wrapper {
@@ -143,4 +193,4 @@ body {
   background-color: #f6f6f6;
 }
 
-/*# sourceMappingURL=app-302315cbc4e34f44e6ff.map*/
+/*# sourceMappingURL=app-a3792a7c064c82efe33f.map*/
