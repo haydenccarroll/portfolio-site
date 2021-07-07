@@ -1,0 +1,46 @@
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    // align-items: center;
+    padding: 30px;
+
+    .left-side {
+        display: flex;
+        
+    }
+
+    .right-side {
+        text-transform: uppercase;
+    }
+
+    .nav-link-wrapper {
+        height: 22px;
+        border-bottom: 1px solid transparent;
+        transition: 0.5s ease-in-out;
+
+        margin-right: 20px;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+
+
+        .nav-link-active {
+            border-bottom-color: 1px solid $hacker-green;
+            color: $hacker-green;
+        }
+
+        a {
+            color: $grey;
+            text-decoration: none;
+
+            &:hover {
+                color: $hacker-green;
+            }
+        }
+
+        &:hover {
+            border-bottom-color: $hacker-green;
+
+        }
+    }
+}
+
