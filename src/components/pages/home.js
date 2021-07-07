@@ -1,105 +1,91 @@
-import React from "react";
+import React, {Component} from "react";
 
+import PreviousProjects from "./previous-projects";
+import CurrentSprint from "./current-sprint";
+import Todo from "./todo";
 
-export default function() {
-    return (
-        <div className="page-wrapper">
-            <div className="header-wrapper">
-                <div className="header-text">
-                    <h1>Hayden Carroll</h1>
-                    <h3>Software Developer</h3>
+export default class Home extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            viewableProjectState: "PAST_PROJECTS"
+        }
+    }
+
+    render() {
+        return (
+            <div className="page-wrapper">
+                <div className="header-wrapper">
+                    <div className="header-text">
+                        <h1>Hayden Carroll</h1>
+                        <h3>Software Developer</h3>
+                    </div>
                 </div>
-            </div>
 
-            <div className="content-wrapper">
+                <div className="content-wrapper">
 
-                <div className="about-section">
-                    <h1>About Me</h1>
-                    <div className="about-content-wrapper">
-                        <div className="image-wrapper">
-                            <img src="../../static/assets/images/auth/login.jpg" alt="Portrait of me" />
+                    <div className="about-section">
+                        <h1>About Me</h1>
+                        <div className="about-content-wrapper">
+                            <div className="image-wrapper">
+                                <img src="../../static/assets/images/portrait.jpg" alt="Portrait of me"/>
+                            </div>
+                            <div className="about-text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum aliquid recusandae hic vitae iste. Soluta, adipisci fuga ducimus omnis maxime quia libero ab molestiae ex perspiciatis obcaecati iusto fugit placeat culpa. Dignissimos quis earum ducimus deserunt nulla est non, sed tempora labore commodi odio magnam totam doloremque ea, eaque eum aperiam ex adipisci, aspernatur soluta voluptas veniam a accusantium. Officia hic laboriosam alias incidunt expedita culpa repellendus nam magni explicabo assumenda repudiandae ab tempora deserunt blanditiis vero nihil nesciunt quo labore veniam voluptatibus natus, fugiat error provident. Error adipisci rem architecto porro temporibus quaerat tempora officia sequi praesentium unde. Consequatur!
+                            </div>                        
                         </div>
-                        <div className="about-text">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum aliquid recusandae hic vitae iste. Soluta, adipisci fuga ducimus omnis maxime quia libero ab molestiae ex perspiciatis obcaecati iusto fugit placeat culpa. Dignissimos quis earum ducimus deserunt nulla est non, sed tempora labore commodi odio magnam totam doloremque ea, eaque eum aperiam ex adipisci, aspernatur soluta voluptas veniam a accusantium. Officia hic laboriosam alias incidunt expedita culpa repellendus nam magni explicabo assumenda repudiandae ab tempora deserunt blanditiis vero nihil nesciunt quo labore veniam voluptatibus natus, fugiat error provident. Error adipisci rem architecto porro temporibus quaerat tempora officia sequi praesentium unde. Consequatur!
-                        </div>                        
+
+                    </div>
+
+                    <div className="resume-section">
+                        <h1>Resume</h1>
+                        <div className="resume-content-wrapper">
+                            <a href="../../../static/assets/images/portrait.jpg" alt="Resume link" target="_blank">Click me to view my Resume!</a>
+                        </div>
+                    </div>
+
+                    <div className="project-wheel">
+                        <div>left-button</div>
+                        {this.state.viewableProjectState === "PAST_PROJECTS" ? <PreviousProjects /> : null}
+                        {this.state.viewableProjectState === "CURRENT_PROJECTS" ? <CurrentSprint /> : null}
+                        {this.state.viewableProjectState === "FUTURE_PROJECTS" ? <Todo /> : null}
+                        <div>right-button</div>
+                    </div>
+
+                    <div className="contact-section">
+                        <h1>Contact Me</h1>
+                        <div className="social-links">
+                            <div className="social-link">
+                                LinkedIn
+                            </div>
+                            <div className="social-link">
+                                Github
+                            </div>
+                        </div>
+                        <form className="contact-me-form">
+                            <div className="form-element-div">
+                                <input type="email" name="user-email" id="user-email" placeholder="Your Email"/>
+                                <label htmlFor="user-email">Your Email</label>
+                            </div>
+                            <div className="form-element-div">
+                                <input type="text" name="email-title" id="email-title" placeholder="Subject"/>
+                                <label htmlFor="email-title">Subject</label>
+                            </div>
+
+                            <div className="form-element-div">
+                                <textarea name="email-body" id="email-body" rows="10" placeholder="Message Content"></textarea>
+                                <label htmlFor="email-body">Message Content</label>
+                            </div>
+
+                            <input type="submit" value="Submit" id="submit"/>
+                        </form>
                     </div>
 
                 </div>
-
-
-                <div className="project-section">
-                    <h1>Previous Projects</h1>
-                    <div className="project-preview-wrapper">
-                        <div className="project-preview">
-                            <div className="project-title">
-                                <h3>ARTEMIS</h3>
-                            </div>
-
-                            <div className="project-description">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis assumenda minus hic id earum facere in recusandae nobis tempore, non dicta maiores, sapiente vero eligendi aliquam? Doloremque, quis pariatur, sit ex atque saepe consectetur neque eligendi earum quos, optio libero quaerat reiciendis iure odit. Praesentium animi molestiae cum? Ipsa repellat ut quae consectetur sit?
-                            </div>
-
-                            <div className="project-links">
-                                <div className="github">
-                                    Github link
-                                </div>
-                                <div className="youtube">
-                                    YouTube link
-                                </div>
-                            </div>
-                        </div>
-                        <div className="project-preview">
-                            <div className="project-title">
-                                <h4>PROJECT DAVINCI</h4>
-                            </div>
-
-                            <div className="project-description">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti voluptatibus culpa atque expedita minima minus perferendis, accusamus itaque dolorum aperiam nemo ex fuga vel, voluptates temporibus tempora ipsa? Illo unde, debitis minima assumenda laborum explicabo nemo mollitia ducimus? Distinctio earum fugiat maiores id reprehenderit, blanditiis est iusto ducimus molestiae magnam pariatur, obcaecati corrupti culpa cupiditate nulla dicta repudiandae officia in laboriosam eveniet. Quae similique, nesciunt veniam ullam architecto natus rerum fugit, sapiente dolorum explicabo dolores?
-                            </div>
-
-                            <div className="project-links">
-                                <div className="github">
-                                    Github link
-                                </div>
-                                <div className="youtube">
-                                    YouTube link
-                                </div>
-                            </div>
-                        </div>
-                        <div className="project-preview">
-                            <div className="project-title">
-                                <h4>OUT OF THE DARK</h4>
-                            </div>
-
-                            <div className="project-description">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum autem nisi laudantium nihil quaerat inventore vero nesciunt aliquam in, architecto iure modi dolore ducimus fugiat reiciendis enim cumque totam itaque culpa aperiam. Facilis error amet accusamus rerum, nobis rem, suscipit vero neque ad eum distinctio. Eaque, voluptas autem repellendus cumque rerum doloribus ducimus placeat beatae et fugit, omnis eum nobis molestiae dignissimos natus nam non adipisci!
-                            </div>
-
-                            <div className="project-links">
-                                <div className="github">
-                                    Github link
-                                </div>
-                                <div className="youtube">
-                                    YouTube link
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            
-                <div className="current-sprint-section">
-                    <h1>Current Sprint</h1>
-
-                    <ul>
-                        <li>IdahoCodes - Mentoring students learning to code at North Idaho College</li>
-                        <li>Learning React.js</li>
-                        <li>Messing around with 3D printer firmware</li>
-                        <li>Hanging out with friends and enjoying summer!</li>
-                    </ul>
-                  </div>
             </div>
-            
-        </div>
 
-    );
+        );
+        
+    }
 }

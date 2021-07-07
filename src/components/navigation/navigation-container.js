@@ -19,7 +19,7 @@ const NavigationContainer = (props) => {
 
             // sign out worked
             if (response.status == 200) {
-                props.history.push("/");
+                props.history.push("/portfolio-site");
                 props.handleSuccessfulLogout();
             }
             return response.data;
@@ -36,13 +36,13 @@ const NavigationContainer = (props) => {
                     <NavLink exact to="/portfolio-site" activeClassName="nav-link-active">Home</NavLink>
                 </div>
                 <div className="nav-link-wrapper">
-                    <NavLink to="/portfolio-site/about-me" activeClassName="nav-link-active">About</NavLink>
+                    <NavLink to="/portfolio-site/previous-projects" activeClassName="nav-link-active">Previous Projects</NavLink>
                 </div>
                 <div className="nav-link-wrapper">
-                    <NavLink to="/portfolio-site/contact" activeClassName="nav-link-active">Contact</NavLink>
+                    <NavLink to="/portfolio-site/current-sprint" activeClassName="nav-link-active">Current Sprint</NavLink>
                 </div>
                 <div className="nav-link-wrapper">
-                    <NavLink to="/portfolio-site/blog" activeClassName="nav-link-active">Blog</NavLink>
+                    <NavLink to="/portfolio-site/todo" activeClassName="nav-link-active">// TODO</NavLink>
                 </div>
 
                 {props.loggedInStatus === "LOGGED_IN" ? dynamicLink("/portfolio-site/portfolio-manager", "Portfolio Manager") : null}

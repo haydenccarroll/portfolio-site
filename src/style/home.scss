@@ -1,6 +1,14 @@
+.page-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
 .header-wrapper {
     @include center-flexbox();
+    width: 100%;
 
+    background: url("../../static//assets//images/heading-background.jpg");
 
 
     .header-text {
@@ -14,11 +22,10 @@
 }
 
 .content-wrapper {
-    display: grid;
-    grid-template-columns: 1fr;
+    max-width: 1000px;
+    padding: 10px;
 
     .about-section {
-        margin: 10px 200px;
 
 
         .about-content-wrapper {
@@ -35,12 +42,58 @@
 
     }
 
+    .project-wheel {
+        display: grid;
+        grid-template-columns: 1fr 5fr 1fr;
+
+    }
 
 
+    .contact-section {
+        .social-links {
+            display: grid;
+            grid-template-columns: max-content max-content;
+            grid-gap: 20px;
+        }
 
+        .contact-me-form {
+            margin-top: 25px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 20px;
+
+            .form-element-div {
+                display: grid;
+                grid-template-columns: 1fr;
+
+                input, textarea{
+                    font-size: 1.5em;
+                    padding: 5px;
+
+                    &:focus {
+                        outline: none;
+                        border: none;
+                        box-shadow: 0 0 10px $hacker-green;
+                    }
+                }
+            }
+
+            .form-element-div:nth-child(3) {
+                grid-column-start: span 2;
+            }
+
+            #submit {
+                width: max-content;
+                font-size: 1.5em;
+                padding: 10px;
+                border-radius: 5px;
+                border: none;
+                background-color: #3a5441;
+            }
+        }
+    }
 
     .project-section {
-        margin: 10px 200px;
         .project-preview-wrapper {
             display: grid;
             grid-template-columns: 1fr;
@@ -54,7 +107,6 @@
                     @include center-flexbox();
                 }
             }
-        }        
+        }
     }
-
 }

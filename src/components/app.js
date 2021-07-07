@@ -9,9 +9,9 @@ import axios from "axios";
 
 import NavigationContainer from "./navigation/navigation-container";
 import Home from "./pages/home";
-import About from "./pages/about";
-import Contact from "./pages/contact";
-import Blog from "./pages/blog";
+import PreviousProjects from "./pages/previous-projects";
+import CurrentSprint from "./pages/current-sprint";
+import Todo from "./pages/todo";
 import PortfolioManager from './pages/portfolio-manager';
 import Auth from "./pages/auth";
 import NoMatch from "./pages/no-match";
@@ -113,10 +113,12 @@ export default class App extends Component {
                                 )}
                             />
 
-                            <Route path="/portfolio-site/about-me" component={About} />
-                            <Route path="/portfolio-site/contact" component={Contact} />
-                            <Route path="/portfolio-site/blog" component={Blog} />
+                            <Route exact path="/portfolio-site/previous-projects" component={PreviousProjects} />
+                            <Route path="/portfolio-site/current-sprint" component={CurrentSprint} />
+                            <Route path="/portfolio-site/todo" component={Todo} />
                             {this.state.loggedInStatus === "LOGGED_IN" ? this.authorizedPages() : null}
+
+                            <Route path="/portfolio-site/" component={NoMatch}/>
                         </Switch>
                     </div>
                 </Router>
