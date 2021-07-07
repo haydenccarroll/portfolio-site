@@ -75,7 +75,7 @@ export default class App extends Component {
         return [
             <Route 
                 key="portfolio-manager" 
-                path="/portfolio-manager"
+                path="portfolio-site/portfolio-manager"
                 component={PortfolioManager} />
         ]
     }
