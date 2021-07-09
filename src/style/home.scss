@@ -46,6 +46,12 @@
         display: grid;
         grid-template-columns: 1fr 5fr 1fr;
 
+        .arrow-div {
+            @include center-flexbox();
+            flex-direction: column;
+            font-size: 3em;
+        }
+
     }
 
 

@@ -1,5 +1,9 @@
 import React, {Component} from "react";
 
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowLeft, faArrowRight }  from '@fortawesome/free-solid-svg-icons'
+
 import PreviousProjects from "./previous-projects";
 import CurrentSprint from "./current-sprint";
 import Todo from "./todo";
@@ -11,9 +15,42 @@ export default class Home extends Component {
         this.state = {
             viewableProjectState: "PAST_PROJECTS"
         }
+
+        this.PROJECT_ARRAY_STATE = ["PAST_PROJECTS", "CURRENT_PROJECTS", "FUTURE_PROJECTS"];
+
+
+        this.projectWheelLeft = this.projectWheelLeft.bind(this);
+        this.projectWheelRight = this.projectWheelRight.bind(this);
+    }
+
+    projectWheelLeft() {
+        let currentIndex = this.PROJECT_ARRAY_STATE.indexOf(this.state.viewableProjectState);
+        let newIndex = currentIndex - 1;
+
+        if (newIndex === -1) {
+            newIndex = this.PROJECT_ARRAY_STATE.length -1;
+        }
+
+        this.setState({
+            viewableProjectState: this.PROJECT_ARRAY_STATE[newIndex]
+        });
+    }
+
+    projectWheelRight() {
+        let currentIndex = this.PROJECT_ARRAY_STATE.indexOf(this.state.viewableProjectState);
+        let newIndex = currentIndex + 1;
+
+        if (newIndex === this.PROJECT_ARRAY_STATE.length) {
+            newIndex = 0;
+        }
+
+        this.setState({
+            viewableProjectState: this.PROJECT_ARRAY_STATE[newIndex]
+        });
     }
 
     render() {
+        console.log("Re rendered!");
         return (
             <div className="page-wrapper">
                 <div className="header-wrapper">
@@ -46,11 +83,15 @@ export default class Home extends Component {
                     </div>
 
                     <div className="project-wheel">
-                        <div>left-button</div>
+                        <div className="arrow-div">
+                            <FontAwesomeIcon icon={faArrowLeft} onClick={this.projectWheelLeft} />
+                        </div>
                         {this.state.viewableProjectState === "PAST_PROJECTS" ? <PreviousProjects /> : null}
                         {this.state.viewableProjectState === "CURRENT_PROJECTS" ? <CurrentSprint /> : null}
                         {this.state.viewableProjectState === "FUTURE_PROJECTS" ? <Todo /> : null}
-                        <div>right-button</div>
+                        <div className="arrow-div">
+                            <FontAwesomeIcon icon={faArrowRight} onClick={this.projectWheelRight} />
+                        </div>
                     </div>
 
                     <div className="contact-section">

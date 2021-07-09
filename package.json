@@ -13,7 +13,6 @@
     "precommit": "eslint src",
     "prod": "NODE_ENV=production node server.js"
   },
-
   "keywords": [
     "es6",
     "es7",
@@ -31,6 +30,9 @@
     "url": "https://github.com/haydenccarroll/haydenccarroll.github.io/issues"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.35",
+    "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "@fortawesome/react-fontawesome": "^0.1.14",
     "ajv": "6.12.0",
     "autoprefixer": "^9.1.0",
     "axios": "^0.21.1",
