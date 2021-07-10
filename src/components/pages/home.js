@@ -4,6 +4,8 @@ import React, {Component} from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeft, faArrowRight }  from '@fortawesome/free-solid-svg-icons'
 
+import "animate.css"
+
 import PreviousProjects from "./previous-projects";
 import CurrentSprint from "./current-sprint";
 import Todo from "./todo";
@@ -13,14 +15,19 @@ export default class Home extends Component {
         super(props);
 
         this.state = {
-            viewableProjectState: "PAST_PROJECTS"
+            viewableProjectState: "PAST_PROJECTS",
+            scroll: {
+                filter: "brightness(100%)",
+            }
         }
 
         this.PROJECT_ARRAY_STATE = ["PAST_PROJECTS", "CURRENT_PROJECTS", "FUTURE_PROJECTS"];
 
 
+
         this.projectWheelLeft = this.projectWheelLeft.bind(this);
         this.projectWheelRight = this.projectWheelRight.bind(this);
+        this.handleScroll = this.handleScroll.bind(this);
     }
 
     projectWheelLeft() {
@@ -49,21 +56,38 @@ export default class Home extends Component {
         });
     }
 
+    componentDidMount() {
+        window.addEventListener("scroll", this.handleScroll);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener("scroll", this.handleScroll);
+    }
+
+    handleScroll() {
+        console.log(1 - window.scrollY / 200);
+        this.setState({
+            scroll: {filter: `brightness(${1 - (window.scrollY / 300)})`}
+        });
+
+    }
+
     render() {
-        console.log("Re rendered!");
         return (
             <div className="page-wrapper">
-                <div className="header-wrapper">
+                <div className="header-wrapper" style={this.state.scroll}>
                     <div className="header-text">
                         <h1>Hayden Carroll</h1>
-                        <h3>Software Developer</h3>
+                        <h2>Software Developer</h2>
                     </div>
                 </div>
 
                 <div className="content-wrapper">
 
                     <div className="about-section">
-                        <h1>About Me</h1>
+                        <div className="section-title">
+                            <h1>About Me</h1>
+                        </div>
                         <div className="about-content-wrapper">
                             <div className="image-wrapper">
                                 <img src="../../static/assets/images/portrait.jpg" alt="Portrait of me"/>
@@ -76,7 +100,9 @@ export default class Home extends Component {
                     </div>
 
                     <div className="resume-section">
-                        <h1>Resume</h1>
+                        <div className="section-title">
+                            <h1>Resume</h1>
+                        </div>
                         <div className="resume-content-wrapper">
                             <a href="../../../static/assets/images/portrait.jpg" alt="Resume link" target="_blank">Click me to view my Resume!</a>
                         </div>
@@ -95,7 +121,9 @@ export default class Home extends Component {
                     </div>
 
                     <div className="contact-section">
-                        <h1>Contact Me</h1>
+                        <div className="section-title">
+                            <h1>Contact Me</h1>
+                        </div>
                         <div className="social-links">
                             <div className="social-link">
                                 LinkedIn

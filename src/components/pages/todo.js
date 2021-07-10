@@ -4,7 +4,9 @@ import {Link} from "react-router-dom";
 export default function() {
     return (
         <div className="todo-section">
-            <h1>//TODO</h1>
+            <div className="section-title">
+                <h1>About Me</h1>
+            </div>
 
             <div className="todo-list">
                 <ul>

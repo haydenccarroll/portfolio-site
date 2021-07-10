@@ -13,10 +13,18 @@
 
     .header-text {
         @include center-flexbox();
+        filter: brightness(200%);
+
         flex-direction: column;
 
         h1 {
             font-size: 3.5em;
+            margin-bottom: 15px;
+        }
+
+        h2 {
+            margin-top: 0;
+            font-size: 2em;
         }
     }
 }
@@ -26,7 +34,6 @@
     padding: 10px;
 
     .about-section {
-
 
         .about-content-wrapper {
             display: grid;
@@ -82,6 +89,10 @@
                         box-shadow: 0 0 10px $hacker-green;
                     }
                 }
+
+                textarea {
+                    resize: none;
+                }
             }
 
             .form-element-div:nth-child(3) {
@@ -115,4 +126,12 @@
             }
         }
     }
+}
+
+.scroll {
+    filter: brightness(50%);
+}
+
+.section-title {
+    @include center-flexbox();
 }

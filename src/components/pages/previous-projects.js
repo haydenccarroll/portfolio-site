@@ -3,7 +3,9 @@ import React from "react";
 export default function() {
     return (
         <div className="project-section">
-            <h1>Previous Projects</h1>
+            <div className="section-title">
+                <h1>Previous Projects</h1>
+            </div>
             <div className="project-preview-wrapper">
                 <div className="project-preview">
                     <div className="project-title">

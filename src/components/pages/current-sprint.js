@@ -3,7 +3,9 @@ import React from "react";
 export default function() {
     return (
         <div className="current-sprint-section">
-            <h1>Current Sprint</h1>
+            <div className="section-title">
+                <h1>About Me</h1>
+            </div>
 
             <ul>
                 <li>IdahoCodes - Mentoring students learning to code at North Idaho College</li>
