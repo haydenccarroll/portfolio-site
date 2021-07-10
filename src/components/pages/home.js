@@ -65,7 +65,6 @@ export default class Home extends Component {
     }
 
     handleScroll() {
-        console.log(1 - window.scrollY / 200);
         this.setState({
             scroll: {filter: `brightness(${1 - (window.scrollY / 300)})`}
         });

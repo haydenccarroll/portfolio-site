@@ -5,7 +5,7 @@ export default function NoMatch() {
     return (
         <div>
             <h2>We couldn't find that page</h2>
-            <Link to={`${process.env.PUBLIC_URL}/`}>Return to homepage</Link>
+            <Link to="/">Return to homepage</Link>
         </div>
     )
 }

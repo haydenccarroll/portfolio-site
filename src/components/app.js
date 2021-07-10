@@ -49,7 +49,6 @@ export default class App extends Component {
     }
 
     checkLoginStatus() {
-        console.log("done");
         return axios.get("https://api.devcamp.space/logged_in", {withCredentials: true}
             ).then(response => {
                 const LOGGED_IN = response.data.logged_in;
@@ -75,7 +74,7 @@ export default class App extends Component {
         return [
             <Route 
                 key="portfolio-manager" 
-                path={`${process.env.PUBLIC_URL}/portfolio-manager`}
+                path="/portfolio-manager"
                 component={PortfolioManager} />
         ]
     }
@@ -89,7 +88,7 @@ export default class App extends Component {
         return (
             <div className='container'>
 
-                <Router basename={"/portfolio-site"}>
+                <Router basename={`${process.env.PUBLIC_URL}`}>
                     <div>
                         <NavigationContainer 
                             loggedInStatus={this.state.loggedInStatus}
@@ -98,10 +97,10 @@ export default class App extends Component {
 
 
                         <Switch>
-                            <Route exact path={`${process.env.PUBLIC_URL}/`} component={Home} />
+                            <Route exact path="/" component={Home} />
 
                             <Route 
-                                path={`${process.env.PUBLIC_URL}/auth`}
+                                path='/auth'
                                 render={props => (
                                     <Auth
                                         {...props}
@@ -111,12 +110,12 @@ export default class App extends Component {
                                 )}
                             />
 
-                            <Route exact path={`${process.env.PUBLIC_URL}/previous-projects`} component={PreviousProjects} />
-                            <Route path={`${process.env.PUBLIC_URL}/current-sprint`} component={CurrentSprint} />
-                            <Route path={`${process.env.PUBLIC_URL}/todo`} component={Todo} />
+                            <Route path="/previous-projects" component={PreviousProjects} />
+                            <Route path="/current-sprint" component={CurrentSprint} />
+                            <Route path="/todo" component={Todo} />
                             {this.state.loggedInStatus === "LOGGED_IN" ? this.authorizedPages() : null}
 
-                            <Route path={`${process.env.PUBLIC_URL}/`} component={NoMatch}/>
+                            <Route path="/" component={NoMatch}/>
                         </Switch>
                     </div>
                 </Router>
