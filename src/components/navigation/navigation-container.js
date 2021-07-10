@@ -18,8 +18,8 @@ const NavigationContainer = (props) => {
         .then(response => {
 
             // sign out worked
-            if (response.status == 200) {
-                props.history.push("/portfolio-site");
+            if (response.status === 200) {
+                props.history.push("/");
                 props.handleSuccessfulLogout();
             }
             return response.data;
@@ -33,25 +33,25 @@ const NavigationContainer = (props) => {
         <div className="nav-wrapper">
             <div className="left-side">
                 <div className="nav-link-wrapper">
-                    <NavLink exact to="/portfolio-site" activeClassName="nav-link-active">Home</NavLink>
+                    <NavLink exact to="/" activeClassName="nav-link-active">Home</NavLink>
                 </div>
                 <div className="nav-link-wrapper">
-                    <NavLink to="/portfolio-site/previous-projects" activeClassName="nav-link-active">Previous Projects</NavLink>
+                    <NavLink to="/previous-projects" activeClassName="nav-link-active">Previous Projects</NavLink>
                 </div>
                 <div className="nav-link-wrapper">
-                    <NavLink to="/portfolio-site/current-sprint" activeClassName="nav-link-active">Current Sprint</NavLink>
+                    <NavLink to="/current-sprint" activeClassName="nav-link-active">Current Sprint</NavLink>
                 </div>
                 <div className="nav-link-wrapper">
-                    <NavLink to="/portfolio-site/todo" activeClassName="nav-link-active">// TODO</NavLink>
+                    <NavLink to="/todo" activeClassName="nav-link-active">//TODO</NavLink>
                 </div>
 
-                {props.loggedInStatus === "LOGGED_IN" ? dynamicLink("/portfolio-site/portfolio-manager", "Portfolio Manager") : null}
+                {props.loggedInStatus === "LOGGED_IN" ? dynamicLink("/portfolio-manager", "Portfolio Manager") : null}
 
             </div>
             <div className="right-side">
                 Hayden Carroll
 
-                {props.loggedInStatus === "LOGGED_IN" ? <a onClick={handleSignOut}>Sign Out</a> : null}
+                {props.loggedInStatus === "LOGGED_IN" ? <button onClick={handleSignOut}>Sign Out</button> : null}
             </div>
         </div>
     );

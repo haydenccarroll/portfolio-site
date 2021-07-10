@@ -1,6 +1,5 @@
 import React, {Component} from "react";
 import axios from "axios";
-import { thisExpression } from "babel-types";
 export default class Login extends Component {
     constructor(props) {
         super(props);

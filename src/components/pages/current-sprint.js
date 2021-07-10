@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function() {
+export default function CurrentSprint() {
     return (
         <div className="current-sprint-section">
             <div className="section-title">

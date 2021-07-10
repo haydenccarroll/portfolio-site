@@ -1,7 +1,6 @@
 import React from "react";
-import {Link} from "react-router-dom";
 
-export default function() {
+export default function Todo() {
     return (
         <div className="todo-section">
             <div className="section-title">

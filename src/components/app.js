@@ -75,7 +75,7 @@ export default class App extends Component {
         return [
             <Route 
                 key="portfolio-manager" 
-                path="portfolio-site/portfolio-manager"
+                path="/portfolio-manager"
                 component={PortfolioManager} />
         ]
     }
@@ -86,12 +86,10 @@ export default class App extends Component {
 
 
     render() {
-        
-        this.prop
         return (
             <div className='container'>
 
-                <Router>
+                <Router basename={"/portfolio-site"}>
                     <div>
                         <NavigationContainer 
                             loggedInStatus={this.state.loggedInStatus}
@@ -100,10 +98,10 @@ export default class App extends Component {
 
 
                         <Switch>
-                            <Route exact path="/portfolio-site" component={Home} />
+                            <Route exact path="/" component={Home} />
 
                             <Route 
-                                path="/portfolio-site/auth"
+                                path="/auth"
                                 render={props => (
                                     <Auth
                                         {...props}
@@ -113,12 +111,12 @@ export default class App extends Component {
                                 )}
                             />
 
-                            <Route exact path="/portfolio-site/previous-projects" component={PreviousProjects} />
-                            <Route path="/portfolio-site/current-sprint" component={CurrentSprint} />
-                            <Route path="/portfolio-site/todo" component={Todo} />
+                            <Route exact path="/previous-projects" component={PreviousProjects} />
+                            <Route path="/current-sprint" component={CurrentSprint} />
+                            <Route path="/todo" component={Todo} />
                             {this.state.loggedInStatus === "LOGGED_IN" ? this.authorizedPages() : null}
 
-                            <Route path="/portfolio-site/" component={NoMatch}/>
+                            <Route path="/" component={NoMatch}/>
                         </Switch>
                     </div>
                 </Router>
