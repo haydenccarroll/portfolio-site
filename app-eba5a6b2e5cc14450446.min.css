@@ -80,7 +80,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  background: url(static/assets/images/heading-background.jpg);
+  background: url(/static/assets/images/heading-background.jpg);
 }
 
 .header-wrapper .header-text {
@@ -4235,4 +4235,4 @@ body {
   animation-name: slideOutUp;
 }
 
-/*# sourceMappingURL=app-9ba502bc595d31314fad.map*/
+/*# sourceMappingURL=app-582971376a562f52a32d.map*/
