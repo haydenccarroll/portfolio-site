@@ -8,6 +8,8 @@ import PreviousProjects from "./previous-projects";
 import CurrentSprint from "./current-sprint";
 import Todo from "./todo";
 
+import ProfileImg from "./../../assets/images/portrait.jpg";
+
 export default class Home extends Component {
     constructor(props) {
         super(props);
@@ -88,7 +90,7 @@ export default class Home extends Component {
                         </div>
                         <div className="about-content-wrapper">
                             <div className="image-wrapper">
-                                <img src="/assets/images/portrait.jpg" alt="Portrait of me"/>
+                                <img src={ProfileImg} alt="Portrait of me"/>
                             </div>
                             <div className="about-text">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum aliquid recusandae hic vitae iste. Soluta, adipisci fuga ducimus omnis maxime quia libero ab molestiae ex perspiciatis obcaecati iusto fugit placeat culpa. Dignissimos quis earum ducimus deserunt nulla est non, sed tempora labore commodi odio magnam totam doloremque ea, eaque eum aperiam ex adipisci, aspernatur soluta voluptas veniam a accusantium. Officia hic laboriosam alias incidunt expedita culpa repellendus nam magni explicabo assumenda repudiandae ab tempora deserunt blanditiis vero nihil nesciunt quo labore veniam voluptatibus natus, fugiat error provident. Error adipisci rem architecto porro temporibus quaerat tempora officia sequi praesentium unde. Consequatur!
@@ -102,7 +104,7 @@ export default class Home extends Component {
                             <h1>Resume</h1>
                         </div>
                         <div className="resume-content-wrapper">
-                            <a href="/assets/images/portrait.jpg" alt="Resume link" target="_blank">Click me to view my Resume!</a>
+                            <a href="./assets/images/portrait.jpg" alt="Resume link" target="_blank">Click me to view my Resume!</a>
                         </div>
                     </div>
 

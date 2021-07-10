@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 
-import Login from "../auth/login";
-import loginImg from "../../assets/images/portrait.jpg";
+import Login from "./../auth/login";
+import loginImg from "./../../assets/images/portrait.jpg";
 
 class Auth extends Component {
     constructor(props) {

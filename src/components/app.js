@@ -75,7 +75,7 @@ export default class App extends Component {
         return [
             <Route 
                 key="portfolio-manager" 
-                path="/portfolio-manager"
+                path={`${process.env.PUBLIC_URL}/portfolio-manager`}
                 component={PortfolioManager} />
         ]
     }
@@ -98,10 +98,10 @@ export default class App extends Component {
 
 
                         <Switch>
-                            <Route exact path="/" component={Home} />
+                            <Route exact path={`${process.env.PUBLIC_URL}/`} component={Home} />
 
                             <Route 
-                                path="/auth"
+                                path={`${process.env.PUBLIC_URL}/auth`}
                                 render={props => (
                                     <Auth
                                         {...props}
@@ -111,12 +111,12 @@ export default class App extends Component {
                                 )}
                             />
 
-                            <Route exact path="/previous-projects" component={PreviousProjects} />
-                            <Route path="/current-sprint" component={CurrentSprint} />
-                            <Route path="/todo" component={Todo} />
+                            <Route exact path={`${process.env.PUBLIC_URL}/previous-projects`} component={PreviousProjects} />
+                            <Route path={`${process.env.PUBLIC_URL}/current-sprint`} component={CurrentSprint} />
+                            <Route path={`${process.env.PUBLIC_URL}/todo`} component={Todo} />
                             {this.state.loggedInStatus === "LOGGED_IN" ? this.authorizedPages() : null}
 
-                            <Route path="/" component={NoMatch}/>
+                            <Route path={`${process.env.PUBLIC_URL}/`} component={NoMatch}/>
                         </Switch>
                     </div>
                 </Router>
