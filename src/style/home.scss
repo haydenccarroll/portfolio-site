@@ -20,11 +20,14 @@
         h1 {
             font-size: 3.5em;
             margin-bottom: 15px;
+            color: $hacker-green;
+
         }
 
         h2 {
             margin-top: 0;
             font-size: 2em;
+            color: $hacker-green;
         }
     }
 }
@@ -122,6 +125,12 @@
 
                 .project-title{
                     @include center-flexbox();
+                }
+
+                .project-links {
+                    display: flex;
+                    justify-content: space-evenly;
+                    font-size: 3em;
                 }
             }
         }

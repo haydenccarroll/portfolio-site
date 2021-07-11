@@ -92,8 +92,19 @@ export default class Home extends Component {
                                 <img src={ProfileImg} alt="Portrait of me"/>
                             </div>
                             <div className="about-text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum aliquid recusandae hic vitae iste. Soluta, adipisci fuga ducimus omnis maxime quia libero ab molestiae ex perspiciatis obcaecati iusto fugit placeat culpa. Dignissimos quis earum ducimus deserunt nulla est non, sed tempora labore commodi odio magnam totam doloremque ea, eaque eum aperiam ex adipisci, aspernatur soluta voluptas veniam a accusantium. Officia hic laboriosam alias incidunt expedita culpa repellendus nam magni explicabo assumenda repudiandae ab tempora deserunt blanditiis vero nihil nesciunt quo labore veniam voluptatibus natus, fugiat error provident. Error adipisci rem architecto porro temporibus quaerat tempora officia sequi praesentium unde. Consequatur!
-                            </div>                        
+                                My name is Hayden Carroll and I am a recent Computer Science graduate
+                                from North Idaho College. I have been very passionate about Computer
+                                Science my whole life, specifically software development, Through the years,
+                                I have been in charge of and a part of many different extracurricular Computer
+                                Science clubs such as leader of the North Idaho College Robotics Team, Website
+                                lead for Project DaVinci, and team member of the North Idaho College ICPC
+                                programming competition for 2021. Currently, I am a coding mentor teaching
+                                middle school through high school students the fundamentals of web develement
+                                at North Idaho College. Starting in the Fall of 2021, I will be attending the
+                                University of Idaho to finish my Bachelor's degree in Computer Science in the
+                                Fall of 2022. I hope to land a job working in software development right after
+                                college!
+                            </div>
                         </div>
 
                     </div>
@@ -104,6 +115,7 @@ export default class Home extends Component {
                         </div>
                         <div className="resume-content-wrapper">
                             <a href="./assets/images/portrait.jpg" alt="Resume link" target="_blank">Click me to view my Resume!</a>
+                            {/* resume preview goes here */}
                         </div>
                     </div>
 
@@ -128,7 +140,7 @@ export default class Home extends Component {
                                 LinkedIn
                             </div>
                             <div className="social-link">
-                                Github
+                                Github link
                             </div>
                         </div>
                         <form className="contact-me-form">
