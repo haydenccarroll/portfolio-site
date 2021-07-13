@@ -1,0 +1,29 @@
+@media (max-width: $breakpoint-phone) {
+    .content-wrapper {
+        .about-section {
+            .about-content-wrapper {
+                display: block !important;
+    
+                .image-wrapper, .about-text {
+                    @include center-flexbox();
+                }
+            }
+        }
+    
+        .project-wheel {
+            .arrow-div{
+                width: 0;
+    
+                *{
+                    display: none;
+                }
+            }
+    
+            display: block; 
+    
+            
+        }
+    }
+    
+
+}
