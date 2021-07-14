@@ -48,6 +48,18 @@
                     width: 250px;
                 }
             }
+
+            .about-text {
+                
+                .social-links {
+                    display: flex;
+                    justify-content: space-between;
+
+                    .social-link {
+                        font-size: 2em;
+                    }
+                }
+            }
         }
 
     }
@@ -64,23 +76,27 @@
 
     }
 
+    .resume-section {
+        .resume-content-wrapper {
+            @include center-flexbox();
+        }
+    }
 
     .contact-section {
-        .social-links {
-            display: grid;
-            grid-template-columns: max-content max-content;
-            grid-gap: 20px;
-        }
 
         .contact-me-form {
             margin-top: 25px;
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr;
             grid-gap: 20px;
 
-            .form-element-div {
+            .email-subject {
                 display: grid;
-                grid-template-columns: 1fr;
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 20px;
+            }
+
+            .form-element-div {
 
                 input, textarea{
                     font-size: 1.5em;
@@ -96,10 +112,6 @@
                 textarea {
                     resize: none;
                 }
-            }
-
-            .form-element-div:nth-child(3) {
-                grid-column-start: span 2;
             }
 
             #submit {

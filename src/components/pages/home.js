@@ -1,14 +1,16 @@
 import React, {Component} from "react";
 
+// import PDFViewer from "pdf-viewer-reactjs";
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowLeft, faArrowRight }  from '@fortawesome/free-solid-svg-icons'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faArrowLeft, faArrowRight}  from '@fortawesome/free-solid-svg-icons'
 
 import PreviousProjects from "./previous-projects";
 import CurrentSprint from "./current-sprint";
 import Todo from "./todo";
 
 import ProfileImg from "./../../assets/images/portrait.jpg";
+import {faGithub, faLinkedinIn} from "@fortawesome/free-brands-svg-icons";
 
 export default class Home extends Component {
     constructor(props) {
@@ -106,6 +108,15 @@ export default class Home extends Component {
                                     Fall of 2022. I hope to land a job working in software development right after
                                     college!
                                 </p>
+                                <div className="social-links">
+                                    <div className="social-link">
+                                        <FontAwesomeIcon icon={faLinkedinIn} />
+                                    </div>
+                                    <div className="social-link">
+                                        <FontAwesomeIcon icon={faGithub} />
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
 
@@ -116,8 +127,12 @@ export default class Home extends Component {
                             <h1>Resume</h1>
                         </div>
                         <div className="resume-content-wrapper">
-                            <a href="./assets/images/portrait.jpg" alt="Resume link" target="_blank">Click me to view my Resume!</a>
-                            {/* resume preview goes here */}
+                            <a href="../../assets/images/portrait.jpg" alt="Resume link" target="_blank">Click me to view my Resume!</a>
+                            {/* <PDFViewer 
+                                document={{
+                                    url: "../../../public/pdfs/resume.pdf"
+                                }}
+                            /> */}
                         </div>
                     </div>
 
@@ -137,22 +152,17 @@ export default class Home extends Component {
                         <div className="section-title">
                             <h1>Contact Me</h1>
                         </div>
-                        <div className="social-links">
-                            <div className="social-link">
-                                LinkedIn
-                            </div>
-                            <div className="social-link">
-                                Github link
-                            </div>
-                        </div>
+
                         <form className="contact-me-form">
-                            <div className="form-element-div">
-                                <input type="email" name="user-email" id="user-email" placeholder="Your Email"/>
-                                <label htmlFor="user-email">Your Email</label>
-                            </div>
-                            <div className="form-element-div">
-                                <input type="text" name="email-title" id="email-title" placeholder="Subject"/>
-                                <label htmlFor="email-title">Subject</label>
+                            <div className="email-subject">
+                                <div className="form-element-div">
+                                    <input type="email" name="user-email" id="user-email" placeholder="Your Email"/>
+                                    <label htmlFor="user-email">Your Email</label>
+                                </div>
+                                <div className="form-element-div">
+                                    <input type="text" name="email-title" id="email-title" placeholder="Subject"/>
+                                    <label htmlFor="email-title">Subject</label>
+                                </div>
                             </div>
 
                             <div className="form-element-div">

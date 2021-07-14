@@ -4,13 +4,22 @@
             .about-content-wrapper {
                 display: block !important;
     
-                .image-wrapper, .about-text {
+                .image-wrapper {
                     @include center-flexbox();
+                }
+
+                .about-text {
+                    .social-links {
+                        display: flex;
+                        justify-content: space-evenly;
+                    }
                 }
             }
         }
     
         .project-wheel {
+            display: block;
+
             .arrow-div{
                 width: 0;
     
@@ -19,9 +28,16 @@
                 }
             }
     
-            display: block; 
-    
-            
+        }
+
+
+        .contact-section {
+            .contact-me-form {
+                .email-subject {
+                    grid-template-columns: 1fr;
+                }
+            }
+
         }
     }
     
