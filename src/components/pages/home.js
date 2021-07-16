@@ -1,6 +1,9 @@
 import React, {Component} from "react";
 
-// import PDFViewer from "pdf-viewer-reactjs";
+import PDFViewer from "pdf-viewer-reactjs";
+// let pdfjs;
+// (async function () { pdfjs = await import("pdfjs-dist/build/pdf"); const pdfjsWorker = await import("pdfjs-dist/build/pdf.worker.entry");
+// pdfjs.GlobalWorkerOptions.workerSrc = pdfjsWorker; })();
 
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faArrowLeft, faArrowRight}  from '@fortawesome/free-solid-svg-icons'
@@ -130,7 +133,7 @@ export default class Home extends Component {
                             <a href="../../assets/images/portrait.jpg" alt="Resume link" target="_blank">Click me to view my Resume!</a>
                             {/* <PDFViewer 
                                 document={{
-                                    url: "../../../public/pdfs/resume.pdf"
+                                    url: "/../../../public/pdfs/resume.pdfs"
                                 }}
                             /> */}
                         </div>
