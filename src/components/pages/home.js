@@ -1,18 +1,20 @@
 import React, {Component} from "react";
 
-// let pdfjs;
-// (async function () { pdfjs = await import("pdfjs-dist/build/pdf"); const pdfjsWorker = await import("pdfjs-dist/build/pdf.worker.entry");
-// pdfjs.GlobalWorkerOptions.workerSrc = pdfjsWorker; })();
+import {Document, Page} from "react-pdf/dist/umd/entry.webpack";
 
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faArrowLeft, faArrowRight}  from '@fortawesome/free-solid-svg-icons'
+import {faGithub, faLinkedinIn} from "@fortawesome/free-brands-svg-icons";
+
+
 
 import PreviousProjects from "./previous-projects";
 import CurrentSprint from "./current-sprint";
 import Todo from "./todo";
-
 import ProfileImg from "./../../assets/images/portrait.jpg";
-import {faGithub, faLinkedinIn} from "@fortawesome/free-brands-svg-icons";
+import Resume from "./../../assets/pdf/Hayden_Carroll_Resume.pdf";
+
+
 
 export default class Home extends Component {
     constructor(props) {
@@ -22,7 +24,8 @@ export default class Home extends Component {
             viewableProjectState: "PAST_PROJECTS",
             scroll: {
                 filter: "brightness(100%)",
-            }
+            },
+            pdfWidth: window.innerWidth*.9
         }
 
         this.PROJECT_ARRAY_STATE = ["PAST_PROJECTS", "CURRENT_PROJECTS", "FUTURE_PROJECTS"];
@@ -32,6 +35,7 @@ export default class Home extends Component {
         this.projectWheelLeft = this.projectWheelLeft.bind(this);
         this.projectWheelRight = this.projectWheelRight.bind(this);
         this.handleScroll = this.handleScroll.bind(this);
+        this.handleResize = this.handleResize.bind(this);
     }
 
     projectWheelLeft() {
@@ -62,17 +66,24 @@ export default class Home extends Component {
 
     componentDidMount() {
         window.addEventListener("scroll", this.handleScroll);
+        window.addEventListener('resize', this.handleResize);
     }
 
     componentWillUnmount() {
         window.removeEventListener("scroll", this.handleScroll);
+        window.removeEventListener('resize', this.handleResize);
     }
 
     handleScroll() {
         this.setState({
             scroll: {filter: `brightness(${1 - (window.scrollY / 250)})`}
         });
+    }
 
+    handleResize() {
+        this.setState({
+            pdfWidth: window.innerWidth*1
+        })
     }
 
     render() {
@@ -143,7 +154,8 @@ export default class Home extends Component {
                                 <h1>Resume</h1>
                             </div>
                             <div className="resume-content-wrapper">
-                                <a href="../../assets/images/portrait.jpg" alt="Resume link" target="_blank">Click me to view my Resume!</a>
+                                <Document file={Resume} className="resume-document"> <Page renderMode="svg" pageNumber={1} width={this.state.pdfWidth} scale={1}/> </Document>
+                                <a href={Resume} alt="Resume link" download>Click to download Resume</a>
                             </div>
                         </div>
                     </div>

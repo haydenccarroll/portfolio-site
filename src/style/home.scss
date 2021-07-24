@@ -103,8 +103,20 @@ p {
 }
 .resume-section {
     .resume-content-wrapper {
-        @include center-flexbox();
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        .resume-document {
+            // width: 1000px;
+        }
     }
+}
+
+canvas {
+    max-width: 2500px;
+    width: 100% !important;
+    // height: auto !important;
 }
 .contact-section {
     .contact-me-form {
