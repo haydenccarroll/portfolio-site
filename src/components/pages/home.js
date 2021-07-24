@@ -1,20 +1,23 @@
 import React, {Component} from "react";
 
-import {Document, Page} from "react-pdf/dist/umd/entry.webpack";
-
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faArrowLeft, faArrowRight}  from '@fortawesome/free-solid-svg-icons'
 import {faGithub, faLinkedinIn} from "@fortawesome/free-brands-svg-icons";
+
+import { Document, Page, pdfjs } from "react-pdf";
 
 
 
 import PreviousProjects from "./previous-projects";
 import CurrentSprint from "./current-sprint";
 import Todo from "./todo";
+
 import ProfileImg from "./../../assets/images/portrait.jpg";
+import BackgroundImg from "./../../assets/images/heading-background.jpg"
 import Resume from "./../../assets/pdf/Hayden_Carroll_Resume.pdf";
 
 
+pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 export default class Home extends Component {
     constructor(props) {
@@ -89,7 +92,7 @@ export default class Home extends Component {
     render() {
         return (
             <div className="page-wrapper">
-                <div className="header-wrapper" style={this.state.scroll}>
+                <div className="header-wrapper" style={Object.assign({}, this.state.scroll, {background: `url(${BackgroundImg})`})}>
                     <div className="header-text">
                         <h1>Hayden Carroll</h1>
                         <h2>Software Developer</h2>
