@@ -7,7 +7,6 @@ import {
 import axios from "axios";
 
 
-import NavigationContainer from "./navigation/navigation-container";
 import Home from "./pages/home";
 import PreviousProjects from "./pages/previous-projects";
 import CurrentSprint from "./pages/current-sprint";
@@ -90,12 +89,6 @@ export default class App extends Component {
 
                 <Router basename={`${process.env.PUBLIC_URL}`}>
                     <div>
-                        <NavigationContainer 
-                            loggedInStatus={this.state.loggedInStatus}
-                            handleSuccessfulLogout={this.handleSuccessfulLogout}
-                        />
-
-
                         <Switch>
                             <Route exact path="/" component={Home} />
 
