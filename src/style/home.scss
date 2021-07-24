@@ -4,6 +4,11 @@
     flex-direction: column;
 }
 
+p {
+    font-size: 1.3em;
+    line-height: 1.2em;
+}
+
 .header-wrapper {
     @include center-flexbox();
     width: 100%;
@@ -53,7 +58,7 @@
                 
                 .social-links {
                     display: flex;
-                    justify-content: space-evenly;
+                    justify-content: space-around;
 
                     .social-link {
                         font-size: 2em;

@@ -1,6 +1,5 @@
 {
-  "name": "my-portfolio-site",
-  "homepage": "https://haydenccarroll.github.io/portfolio-site",
+  "name": "portfolio-site",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -22,8 +21,8 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "start": "react-app-rewired start",
-    "build": "react-app-rewired build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "test": "react-scripts test",
