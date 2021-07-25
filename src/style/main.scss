@@ -1,9 +1,11 @@
 @import "./variables.scss";
 @import "./mixins.scss";
 @import "./base.scss";
-@import "./button.scss";
-@import "./navigation.scss";
 @import "./home.scss";
-@import "./auth.scss";
-@import "./portfolio-manager.scss";
+
+@import "./sections/about.scss";
+@import "./sections/project.scss";
+@import "./sections/resume.scss";
+@import "./sections/contact.scss";
+
 @import "./media-queries.scss"

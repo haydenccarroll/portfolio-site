@@ -13,7 +13,7 @@ export default function PreviousProjects() {
             <div className="project-preview-wrapper">
                 <div className="project-preview">
                     <div className="project-title">
-                        <h3>ARTEMIS</h3>
+                        <h2>ARTEMIS</h2>
                     </div>
                     <div className="project-description">
                         <p> 
@@ -32,13 +32,13 @@ export default function PreviousProjects() {
                         </p>
                     </div>
                     <div className="project-links">
-                        <div className="github">
+                        <div className="social-link">
                             <a href="https://github.com/NIC-Artemis-Robotic-Team" target="_blank" rel="noopener noreferrer">
                                 <FontAwesomeIcon icon={faGithub} />
                             </a>
 
                         </div>
-                        <div className="youtube">
+                        <div className="social-link">
                             <a href="https://youtu.be/R5eFCb2S9to" target="_blank" rel="noopener noreferrer">
                                 <FontAwesomeIcon icon={faYoutube} />
                             </a>
@@ -47,7 +47,7 @@ export default function PreviousProjects() {
                 </div>
                 <div className="project-preview">
                     <div className="project-title">
-                        <h4>PROJECT DAVINCI</h4>
+                        <h2>PROJECT DAVINCI</h2>
                     </div>
                     <div className="project-description">
                         <p>
@@ -65,17 +65,17 @@ export default function PreviousProjects() {
                         </p>
                     </div>
                     <div className="project-links">
-                        <div className="github">
+                        <div className="social-link">
                             <a href="https://github.com/haydenccarroll/project-davinci" target="_blank" rel="noopener noreferrer">
                                 <FontAwesomeIcon icon={faGithub} />
                             </a>
                         </div>
-                        <div className="website">
+                        <div className="social-link">
                             <a href="https://www.nasa.gov/image-feature/elana-19-davinci" target="_blank" rel="noopener noreferrer">
                                 <FontAwesomeIcon icon={faGlobe} />
                             </a>
                         </div>
-                        <div className="youtube">
+                        <div className="social-link">
                             <a href="https://www.youtube.com/watch?v=1lw6E9o82U4" target="_blank" rel="noopener noreferrer">
                                 <FontAwesomeIcon icon={faYoutube} />
                             </a>
@@ -84,7 +84,7 @@ export default function PreviousProjects() {
                 </div>
                 <div className="project-preview">
                     <div className="project-title">
-                        <h4>OUT OF THE DARK</h4>
+                        <h2>OUT OF THE DARK</h2>
                     </div>
                     <div className="project-description">
                         <p>
@@ -97,12 +97,12 @@ export default function PreviousProjects() {
                         </p>
                     </div>
                     <div className="project-links">
-                        <div className="github">
+                        <div className="social-link">
                             <a href="https://github.com/haydenccarroll/Out-Of-The-Dark" target="_blank" rel="noopener noreferrer">
                                 <FontAwesomeIcon icon={faGithub} />
                             </a>
                         </div>
-                        <div className="youtube">
+                        <div className="social-link">
                             <a href="https://www.youtube.com/watch?v=4APMlpVHurY" target="_blank" rel="noopener noreferrer">
                                 <FontAwesomeIcon icon={faYoutube} />
                             </a>

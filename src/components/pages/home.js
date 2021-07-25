@@ -41,7 +41,7 @@ export default class Home extends Component {
     render() {
         return (
             <div className="page-wrapper">
-                <div className="header-wrapper" style={Object.assign({}, this.state.scroll, {background: `url(${BackgroundImg})`})}>
+                <div className="header-wrapper" style={this.state.scroll}>
                     <div className="header-text">
                         <h1>Hayden Carroll</h1>
                         <h2>Software Developer</h2>
