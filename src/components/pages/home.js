@@ -8,9 +8,7 @@ import { Document, Page, pdfjs } from "react-pdf";
 
 
 
-import PreviousProjects from "./previous-projects";
-import CurrentSprint from "./current-sprint";
-import Todo from "./todo";
+import PreviousProjects from "./../sections/previous-projects"; 
 
 import ProfileImg from "./../../assets/images/portrait.jpg";
 import BackgroundImg from "./../../assets/images/heading-background.jpg"
@@ -24,46 +22,15 @@ export default class Home extends Component {
         super(props);
 
         this.state = {
-            viewableProjectState: "PAST_PROJECTS",
             scroll: {
                 filter: "brightness(100%)",
             },
         }
 
-        this.PROJECT_ARRAY_STATE = ["PAST_PROJECTS", "CURRENT_PROJECTS", "FUTURE_PROJECTS"];
-
-
-
-        this.projectWheelLeft = this.projectWheelLeft.bind(this);
-        this.projectWheelRight = this.projectWheelRight.bind(this);
         this.handleScroll = this.handleScroll.bind(this);
     }
 
-    projectWheelLeft() {
-        let currentIndex = this.PROJECT_ARRAY_STATE.indexOf(this.state.viewableProjectState);
-        let newIndex = currentIndex - 1;
 
-        if (newIndex === -1) {
-            newIndex = this.PROJECT_ARRAY_STATE.length -1;
-        }
-
-        this.setState({
-            viewableProjectState: this.PROJECT_ARRAY_STATE[newIndex]
-        });
-    }
-
-    projectWheelRight() {
-        let currentIndex = this.PROJECT_ARRAY_STATE.indexOf(this.state.viewableProjectState);
-        let newIndex = currentIndex + 1;
-
-        if (newIndex === this.PROJECT_ARRAY_STATE.length) {
-            newIndex = 0;
-        }
-
-        this.setState({
-            viewableProjectState: this.PROJECT_ARRAY_STATE[newIndex]
-        });
-    }
 
     componentDidMount() {
         window.addEventListener("scroll", this.handleScroll);
@@ -133,16 +100,8 @@ export default class Home extends Component {
                         </div>
                     </div>
                     <div id="outer-project-div">
-                        <div className="project-wheel content-wrapper"  >
-                            <div className="arrow-div">
-                                <FontAwesomeIcon icon={faArrowLeft} onClick={this.projectWheelLeft} />
-                            </div>
-                            {this.state.viewableProjectState === "PAST_PROJECTS" ? <PreviousProjects /> : null}
-                            {this.state.viewableProjectState === "CURRENT_PROJECTS" ? <CurrentSprint /> : null}
-                            {this.state.viewableProjectState === "FUTURE_PROJECTS" ? <Todo /> : null}
-                            <div className="arrow-div">
-                                <FontAwesomeIcon icon={faArrowRight} onClick={this.projectWheelRight} />
-                            </div>
+                        <div className="content-wrapper">
+                            <PreviousProjects />
                         </div>
                     </div>
                     <div id="outer-resume-div">
