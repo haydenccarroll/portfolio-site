@@ -28,7 +28,7 @@ export default class Home extends Component {
             scroll: {
                 filter: "brightness(100%)",
             },
-            pdfWidth: window.innerWidth*.9
+            pdfWidth: (window.innerWidth*.95 > 1000) ? 1000 : window.innerWidth*.95
         }
 
         this.PROJECT_ARRAY_STATE = ["PAST_PROJECTS", "CURRENT_PROJECTS", "FUTURE_PROJECTS"];
@@ -85,7 +85,7 @@ export default class Home extends Component {
 
     handleResize() {
         this.setState({
-            pdfWidth: window.innerWidth*1
+            pdfWidth: (window.innerWidth*.95 > 1000) ? 1000 : window.innerWidth*.95
         })
     }
 
