@@ -1,7 +1,8 @@
 import React from "react";
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub, faYoutube }  from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faGlobe}  from '@fortawesome/free-solid-svg-icons';
+import { faGithub, faYoutube }  from '@fortawesome/free-brands-svg-icons';
 
 export default function PreviousProjects() {
     return (
@@ -32,13 +33,13 @@ export default function PreviousProjects() {
                     </div>
                     <div className="project-links">
                         <div className="github">
-                            <a href="http://" target="_blank" rel="noopener noreferrer">
+                            <a href="https://github.com/NIC-Artemis-Robotic-Team" target="_blank" rel="noopener noreferrer">
                                 <FontAwesomeIcon icon={faGithub} />
                             </a>
 
                         </div>
                         <div className="youtube">
-                            <a href="http://" target="_blank" rel="noopener noreferrer">
+                            <a href="https://youtu.be/R5eFCb2S9to" target="_blank" rel="noopener noreferrer">
                                 <FontAwesomeIcon icon={faYoutube} />
                             </a>
                         </div>
@@ -65,12 +66,17 @@ export default function PreviousProjects() {
                     </div>
                     <div className="project-links">
                         <div className="github">
-                            <a href="http://" target="_blank" rel="noopener noreferrer">
+                            <a href="https://github.com/haydenccarroll/project-davinci" target="_blank" rel="noopener noreferrer">
                                 <FontAwesomeIcon icon={faGithub} />
                             </a>
                         </div>
+                        <div className="website">
+                            <a href="https://www.nasa.gov/image-feature/elana-19-davinci" target="_blank" rel="noopener noreferrer">
+                                <FontAwesomeIcon icon={faGlobe} />
+                            </a>
+                        </div>
                         <div className="youtube">
-                            <a href="http://" target="_blank" rel="noopener noreferrer">
+                            <a href="https://www.youtube.com/watch?v=1lw6E9o82U4" target="_blank" rel="noopener noreferrer">
                                 <FontAwesomeIcon icon={faYoutube} />
                             </a>
                         </div>
@@ -92,12 +98,12 @@ export default function PreviousProjects() {
                     </div>
                     <div className="project-links">
                         <div className="github">
-                            <a href="http://" target="_blank" rel="noopener noreferrer">
+                            <a href="https://github.com/haydenccarroll/Out-Of-The-Dark" target="_blank" rel="noopener noreferrer">
                                 <FontAwesomeIcon icon={faGithub} />
                             </a>
                         </div>
                         <div className="youtube">
-                            <a href="http://" target="_blank" rel="noopener noreferrer">
+                            <a href="https://www.youtube.com/watch?v=4APMlpVHurY" target="_blank" rel="noopener noreferrer">
                                 <FontAwesomeIcon icon={faYoutube} />
                             </a>
                         </div>

@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faArrowLeft, faArrowRight}  from '@fortawesome/free-solid-svg-icons'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faArrowLeft, faArrowRight}  from '@fortawesome/free-solid-svg-icons';
 import {faGithub, faLinkedinIn} from "@fortawesome/free-brands-svg-icons";
 
 import { Document, Page, pdfjs } from "react-pdf";
@@ -116,12 +116,12 @@ export default class Home extends Component {
                                     </p>
                                     <div className="social-links">
                                         <div className="social-link">
-                                            <a href="http://" target="_blank" rel="noopener noreferrer">
+                                            <a href="https://www.linkedin.com/in/hayden-carroll-764158218/" target="_blank" rel="noopener noreferrer">
                                                 <FontAwesomeIcon icon={faLinkedinIn} />
                                             </a>
                                         </div>
                                         <div className="social-link">
-                                            <a href="http://" target="_blank" rel="noopener noreferrer">
+                                            <a href="https://github.com/haydenccarroll" target="_blank" rel="noopener noreferrer">
                                                 <FontAwesomeIcon icon={faGithub} />
                                             </a>
                                         </div>
