@@ -162,14 +162,19 @@ canvas {
         grid-template-columns: 1fr;
         grid-gap: 20px;
         .project-preview {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
             border: 1px solid $hacker-green;
             padding: 0 20px 10px 20px;
             .project-title{
                 @include center-flexbox();
             }
             .project-links {
-                display: flex;
-                justify-content: space-evenly;
+                display: grid;
+                grid-auto-flow: column;
+                grid-gap: 20px;
                 font-size: 3em;
             }
         }
