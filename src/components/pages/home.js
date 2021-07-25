@@ -116,10 +116,14 @@ export default class Home extends Component {
                                     </p>
                                     <div className="social-links">
                                         <div className="social-link">
-                                            <FontAwesomeIcon icon={faLinkedinIn} />
+                                            <a href="http://" target="_blank" rel="noopener noreferrer">
+                                                <FontAwesomeIcon icon={faLinkedinIn} />
+                                            </a>
                                         </div>
                                         <div className="social-link">
-                                            <FontAwesomeIcon icon={faGithub} />
+                                            <a href="http://" target="_blank" rel="noopener noreferrer">
+                                                <FontAwesomeIcon icon={faGithub} />
+                                            </a>
                                         </div>
                                     </div>
 

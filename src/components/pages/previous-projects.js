@@ -32,11 +32,15 @@ export default function PreviousProjects() {
                     </div>
                     <div className="project-links">
                         <div className="github">
-                            <FontAwesomeIcon icon={faGithub} />
+                            <a href="http://" target="_blank" rel="noopener noreferrer">
+                                <FontAwesomeIcon icon={faGithub} />
+                            </a>
 
                         </div>
                         <div className="youtube">
-                            <FontAwesomeIcon icon={faYoutube} />
+                            <a href="http://" target="_blank" rel="noopener noreferrer">
+                                <FontAwesomeIcon icon={faYoutube} />
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -61,10 +65,14 @@ export default function PreviousProjects() {
                     </div>
                     <div className="project-links">
                         <div className="github">
-                            <FontAwesomeIcon icon={faGithub} />
+                            <a href="http://" target="_blank" rel="noopener noreferrer">
+                                <FontAwesomeIcon icon={faGithub} />
+                            </a>
                         </div>
                         <div className="youtube">
-                            <FontAwesomeIcon icon={faYoutube} />
+                            <a href="http://" target="_blank" rel="noopener noreferrer">
+                                <FontAwesomeIcon icon={faYoutube} />
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -84,10 +92,14 @@ export default function PreviousProjects() {
                     </div>
                     <div className="project-links">
                         <div className="github">
-                            <FontAwesomeIcon icon={faGithub} />
+                            <a href="http://" target="_blank" rel="noopener noreferrer">
+                                <FontAwesomeIcon icon={faGithub} />
+                            </a>
                         </div>
                         <div className="youtube">
-                            <FontAwesomeIcon icon={faYoutube} />
+                            <a href="http://" target="_blank" rel="noopener noreferrer">
+                                <FontAwesomeIcon icon={faYoutube} />
+                            </a>
                         </div>
                     </div>
                 </div>
