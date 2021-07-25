@@ -28,7 +28,6 @@ export default class Home extends Component {
             scroll: {
                 filter: "brightness(100%)",
             },
-            pdfWidth: (window.innerWidth*.95 > 1000) ? 1000 : window.innerWidth*.95
         }
 
         this.PROJECT_ARRAY_STATE = ["PAST_PROJECTS", "CURRENT_PROJECTS", "FUTURE_PROJECTS"];
@@ -38,7 +37,6 @@ export default class Home extends Component {
         this.projectWheelLeft = this.projectWheelLeft.bind(this);
         this.projectWheelRight = this.projectWheelRight.bind(this);
         this.handleScroll = this.handleScroll.bind(this);
-        this.handleResize = this.handleResize.bind(this);
     }
 
     projectWheelLeft() {
@@ -69,24 +67,16 @@ export default class Home extends Component {
 
     componentDidMount() {
         window.addEventListener("scroll", this.handleScroll);
-        window.addEventListener('resize', this.handleResize);
     }
 
     componentWillUnmount() {
         window.removeEventListener("scroll", this.handleScroll);
-        window.removeEventListener('resize', this.handleResize);
     }
 
     handleScroll() {
         this.setState({
             scroll: {filter: `brightness(${1 - (window.scrollY / 250)})`}
         });
-    }
-
-    handleResize() {
-        this.setState({
-            pdfWidth: (window.innerWidth*.95 > 1000) ? 1000 : window.innerWidth*.95
-        })
     }
 
     render() {
@@ -157,7 +147,7 @@ export default class Home extends Component {
                                 <h1>Resume</h1>
                             </div>
                             <div className="resume-content-wrapper">
-                                <Document file={Resume} className="resume-document"> <Page renderMode="svg" pageNumber={1} width={this.state.pdfWidth} scale={1}/> </Document>
+                                <Document file={Resume} className="resume-document"> <Page renderMode="svg" pageNumber={1}  scale={1}/> </Document>
                                 <a href={Resume} alt="Resume link" download>Click to download Resume</a>
                             </div>
                         </div>

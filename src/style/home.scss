@@ -13,6 +13,14 @@ p {
     line-height: 1.2em;
 }
 
+
+.react-pdf__Page__svg, .react-pdf__Page__svg *{
+    margin: 0 auto !important;
+    padding: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
 .header-wrapper {
     @include center-flexbox();
     width: 100%;
@@ -45,7 +53,6 @@ p {
     display: flex;
     align-items: center;
     flex-direction: column;
-
 }
 
 .outer-content-wrapper > div:nth-child(2n){
@@ -64,6 +71,7 @@ p {
 .content-wrapper {
     max-width: 1000px;
     padding: 10px;
+    width: 100%;
 }
 .about-section {
     .about-content-wrapper {
@@ -103,9 +111,14 @@ p {
         display: flex;
         align-items: center;
         flex-direction: column;
+        width: 100%;
+
+        & * {
+            overflow: hidden !important;
+        }
 
         .resume-document {
-            // width: 1000px;
+            width: 100%;
         }
     }
 }
