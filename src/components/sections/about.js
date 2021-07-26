@@ -1,10 +1,7 @@
 import React from "react";
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faLinkedinIn}  from '@fortawesome/free-brands-svg-icons';
 
 import ProfileImg from "./../../assets/images/portrait.jpg";
-
 
 export default function About() {
     return (
@@ -36,12 +33,12 @@ export default function About() {
                     <div className="social-links">
                         <div className="social-link">
                             <a href="https://www.linkedin.com/in/hayden-carroll-764158218/" target="_blank" rel="noopener noreferrer">
-                                <FontAwesomeIcon icon={faLinkedinIn} />
+                                <i className="fab fa-linkedin"></i>
                             </a>
                         </div>
                         <div className="social-link">
                             <a href="https://github.com/haydenccarroll" target="_blank" rel="noopener noreferrer">
-                                <FontAwesomeIcon icon={faGithub} />
+                                <i className="fab fa-github"></i>
                             </a>
                         </div>
                     </div>

@@ -1,8 +1,6 @@
 import React from "react";
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faGlobe}  from '@fortawesome/free-solid-svg-icons';
-import { faGithub, faYoutube }  from '@fortawesome/free-brands-svg-icons';
+
 
 import OutOfTheDarkImg from "../../assets/images/out-of-the-dark.png";
 import CubesatImg from "../../assets/images/cubesat.png";
@@ -20,7 +18,7 @@ export default function PreviousProjects() {
                         <h2>ARTEMIS</h2>
                     </div>
                     <div className="project-description">
-                        <img src={ArtemisImg} alt="Picture of Artemis Robot"/>
+                        <img src={ArtemisImg} alt="Artemis Robot"/>
 
                         <p> 
                             The NASA Artemis Lunar Lava Tube Competition is a competition funded by
@@ -40,13 +38,13 @@ export default function PreviousProjects() {
                     <div className="project-links">
                         <div className="social-link">
                             <a href="https://github.com/NIC-Artemis-Robotic-Team" target="_blank" rel="noopener noreferrer">
-                                <FontAwesomeIcon icon={faGithub} />
+                                <i className="fab fa-github"></i>
                             </a>
 
                         </div>
                         <div className="social-link">
                             <a href="https://youtu.be/R5eFCb2S9to" target="_blank" rel="noopener noreferrer">
-                                <FontAwesomeIcon icon={faYoutube} />
+                                <i className="fab fa-youtube"></i>
                             </a>
                         </div>
                     </div>
@@ -56,7 +54,7 @@ export default function PreviousProjects() {
                         <h2>PROJECT DAVINCI</h2>
                     </div>
                     <div className="project-description">
-                        <img src={CubesatImg} alt="CubeSat image"/>
+                        <img src={CubesatImg} alt="CubeSat home page"/>
 
                         <p>
                             For a couple years, I was a part of the North Idaho STEM Charter 
@@ -75,17 +73,17 @@ export default function PreviousProjects() {
                     <div className="project-links">
                         <div className="social-link">
                             <a href="https://github.com/haydenccarroll/project-davinci" target="_blank" rel="noopener noreferrer">
-                                <FontAwesomeIcon icon={faGithub} />
+                                <i className="fab fa-github"></i>
                             </a>
                         </div>
                         <div className="social-link">
                             <a href="https://www.nasa.gov/image-feature/elana-19-davinci" target="_blank" rel="noopener noreferrer">
-                                <FontAwesomeIcon icon={faGlobe} />
+                                {/* <FontAwesomeIcon icon={faGlobe} /> */}
                             </a>
                         </div>
                         <div className="social-link">
                             <a href="https://www.youtube.com/watch?v=1lw6E9o82U4" target="_blank" rel="noopener noreferrer">
-                                <FontAwesomeIcon icon={faYoutube} />
+                                <i className="fab fa-youtube"></i>
                             </a>
                         </div>
                     </div>
@@ -98,7 +96,7 @@ export default function PreviousProjects() {
                         <img src={OutOfTheDarkImg} alt="Out of the dark starting screen"/>
                         <p>
                             Out Of The Dark is a 2D top down maze game created by
-                            myself and one teammate for our Computer Science II class.
+                            myself and one teammate for our Computer Science Ii className.
                             Because our game was rather large in scope, I had to learn good
                             strategies for organizing such a large codebase. My favorite
                             part of the project was to get C++ and Python to communicate
@@ -108,12 +106,12 @@ export default function PreviousProjects() {
                     <div className="project-links">
                         <div className="social-link">
                             <a href="https://github.com/haydenccarroll/Out-Of-The-Dark" target="_blank" rel="noopener noreferrer">
-                                <FontAwesomeIcon icon={faGithub} />
+                                <i className="fab fa-github"></i>
                             </a>
                         </div>
                         <div className="social-link">
                             <a href="https://www.youtube.com/watch?v=4APMlpVHurY" target="_blank" rel="noopener noreferrer">
-                                <FontAwesomeIcon icon={faYoutube} />
+                                <i className="fab fa-youtube"></i>
                             </a>
                         </div>
                     </div>

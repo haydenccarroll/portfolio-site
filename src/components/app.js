@@ -9,11 +9,6 @@ import Home from "./pages/home";
 import NoMatch from "./pages/no-match";
 
 export default class App extends Component {
-
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         return (
             <div className='container'>

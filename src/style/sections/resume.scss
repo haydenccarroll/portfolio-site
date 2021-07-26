@@ -1,8 +1,6 @@
 .resume-section {
     .resume-content-wrapper {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
+        @include center-flexbox();
         width: 100%;
 
         & * {

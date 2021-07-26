@@ -1,7 +1,5 @@
 .page-wrapper {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    @include center-flexbox();
 
     -webkit-box-shadow: inset 5px 5px 1000px 5px rgba(0,0,0,0.76); 
     box-shadow: inset 5px 5px 1000px 5px rgba(0,0,0,0.76);
@@ -23,8 +21,6 @@ p {
     .header-text {
         @include center-flexbox();
 
-        flex-direction: column;
-
         h1 {
             font-size: 4.5em;
             margin-bottom: 15px;
@@ -38,24 +34,14 @@ p {
         }
 
         h1, h2 {
-            background: rgb(53,161,73);
-            background: -moz-linear-gradient(90deg, rgba(53,161,73,1) 0%, rgba(56,239,126,1) 61%, rgba(74,255,143,1) 100%);
-            background: -webkit-linear-gradient(90deg, rgba(53,161,73,1) 0%, rgba(56,239,126,1) 61%, rgba(74,255,143,1) 100%);
-            background: linear-gradient(90deg, rgba(53,161,73,1) 0%, rgba(56,239,126,1) 61%, rgba(74,255,143,1) 100%);
-            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#35a149",endColorstr="#4aff8f",GradientType=1); 
-
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            @include green-gradient-text();
           }
     }
 }
 
  .outer-content-wrapper{
     width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    @include center-flexbox();
 
     & > div:nth-child(2n) {
         width: 100%;
@@ -82,11 +68,11 @@ p {
 
 .social-link a{
     font-size: 3em;
+
+    & i {
+        @include green-gradient-text();
+    }
 }
-
-
-
-
 
 
 .scroll {
