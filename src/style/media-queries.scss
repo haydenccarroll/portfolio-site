@@ -35,3 +35,9 @@
     }
 
 }
+
+@media (max-width: $breakpoint-small-phone) {
+    .header-text h1 {
+        font-size: 4em !important;
+    }
+}
