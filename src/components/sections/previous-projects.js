@@ -4,6 +4,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faGlobe}  from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faYoutube }  from '@fortawesome/free-brands-svg-icons';
 
+import OutOfTheDarkImg from "../../assets/images/out-of-the-dark.png";
+import CubesatImg from "../../assets/images/cubesat.png";
+import ArtemisImg from "../../assets/images/artemis.png";
+
 export default function PreviousProjects() {
     return (
         <div className="project-section">
@@ -16,6 +20,8 @@ export default function PreviousProjects() {
                         <h2>ARTEMIS</h2>
                     </div>
                     <div className="project-description">
+                        <img src={ArtemisImg} alt="Picture of Artemis Robot"/>
+
                         <p> 
                             The NASA Artemis Lunar Lava Tube Competition is a competition funded by
                             the Washington Space Grant Consortium. Teams made up of undergraduate students
@@ -50,6 +56,8 @@ export default function PreviousProjects() {
                         <h2>PROJECT DAVINCI</h2>
                     </div>
                     <div className="project-description">
+                        <img src={CubesatImg} alt="CubeSat image"/>
+
                         <p>
                             For a couple years, I was a part of the North Idaho STEM Charter 
                             Academy CubeSat team. Our team was chosen by NASA to develop and
@@ -87,6 +95,7 @@ export default function PreviousProjects() {
                         <h2>OUT OF THE DARK</h2>
                     </div>
                     <div className="project-description">
+                        <img src={OutOfTheDarkImg} alt="Out of the dark starting screen"/>
                         <p>
                             Out Of The Dark is a 2D top down maze game created by
                             myself and one teammate for our Computer Science II class.

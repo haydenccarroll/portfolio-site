@@ -5,10 +5,6 @@ import PreviousProjects from "./../sections/previous-projects";
 import Resume from "./../sections/resume";
 import Contact from "./../sections/contact";
 
-import BackgroundImg from "./../../assets/images/heading-background.jpg"
-
-
-
 export default class Home extends Component {
     constructor(props) {
         super(props);
