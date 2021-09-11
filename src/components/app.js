@@ -8,12 +8,14 @@ import {
 import Home from "./pages/home";
 import NoMatch from "./pages/no-match";
 
+const packageJson = require("../../package.json");
+
 export default class App extends Component {
     render() {
         return (
             <div className='container'>
 
-                <Router basename={`${process.env.PUBLIC_URL}`}>
+                <Router basename={packageJson.homepage}>
                     <div>
                         <Switch>
                             <Route exact path="/" component={Home} />
