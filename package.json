@@ -1,6 +1,5 @@
 {
-  "name": "my-portfolio-site",
-  "homepage": "https://haydenccarroll.github.io/portfolio-site",
+  "name": "portfolio-site",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

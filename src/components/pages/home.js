@@ -1,6 +1,5 @@
 import React, {Component} from "react";
 
-import PDFViewer from "pdf-viewer-reactjs";
 // let pdfjs;
 // (async function () { pdfjs = await import("pdfjs-dist/build/pdf"); const pdfjsWorker = await import("pdfjs-dist/build/pdf.worker.entry");
 // pdfjs.GlobalWorkerOptions.workerSrc = pdfjsWorker; })();
@@ -156,7 +155,7 @@ export default class Home extends Component {
                             <h1>Contact Me</h1>
                         </div>
 
-                        <form className="contact-me-form">
+                        <form className="contact-me-form" action="https://formspree.io/f/xdoybney" method="POST">
                             <div className="email-subject">
                                 <div className="form-element-div">
                                     <input type="email" name="user-email" id="user-email" placeholder="Your Email"/>

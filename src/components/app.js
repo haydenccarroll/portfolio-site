@@ -87,7 +87,8 @@ export default class App extends Component {
     render() {
         return (
             <div className='container'>
-                <Router basename="/portfolio-site/">
+
+                <Router basename={`${process.env.PUBLIC_URL}`}>
                     <div>
                         <NavigationContainer 
                             loggedInStatus={this.state.loggedInStatus}
