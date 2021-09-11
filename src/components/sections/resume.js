@@ -2,7 +2,7 @@ import React from "react";
 import { Document, Page, pdfjs } from "react-pdf";
 
 
-import ResumeFile from "./../../assets/pdf/Hayden_Carroll_Resume.pdf";
+import ResumeFile from "./../../assets/pdf/resume.pdf";
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
