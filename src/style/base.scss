@@ -5,6 +5,14 @@ body {
     color: $off-white;
 }
 
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
 .container {
     display: grid;
     grid-template-columns: 1fr;

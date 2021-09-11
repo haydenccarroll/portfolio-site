@@ -1,45 +1,43 @@
 @media (max-width: $breakpoint-phone) {
-    .content-wrapper {
-        .about-section {
-            .about-content-wrapper {
-                display: block !important;
-    
-                .image-wrapper {
-                    @include center-flexbox();
-                }
+    .about-section {
+        .about-content-wrapper {
+            display: block !important;
 
-                .about-text {
-                    .social-links {
-                        display: flex;
-                        justify-content: space-evenly;
-                    }
+            .image-wrapper {
+                @include center-flexbox();
+            }
+            .about-text {
+                .social-links {
+                    display: flex;
+                    justify-content: space-evenly;
                 }
             }
-        }
-    
-        .project-wheel {
-            display: block;
-
-            .arrow-div{
-                width: 0;
-    
-                *{
-                    display: none;
-                }
-            }
-    
-        }
-
-
-        .contact-section {
-            .contact-me-form {
-                .email-subject {
-                    grid-template-columns: 1fr;
-                }
-            }
-
         }
     }
-    
 
+    .project-wheel {
+        display: block;
+        .arrow-div{
+            width: 0;
+
+            *{
+                display: none;
+            }
+        }
+
+    }
+    .contact-section {
+        .contact-me-form {
+            .email-subject {
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+
+}
+
+@media (max-width: $breakpoint-small-phone) {
+    .header-text h1 {
+        font-size: 4em !important;
+    }
 }

@@ -20,4 +20,25 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+}
+
+
+@mixin green-gradient-text {
+    background: rgb(53,161,73);
+    background: -moz-linear-gradient(90deg, rgba(53,161,73,1) 0%, rgba(56,239,126,1) 61%, rgba(74,255,143,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(53,161,73,1) 0%, rgba(56,239,126,1) 61%, rgba(74,255,143,1) 100%);
+    background: linear-gradient(90deg, rgba(53,161,73,1) 0%, rgba(56,239,126,1) 61%, rgba(74,255,143,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#35a149",endColorstr="#4aff8f",GradientType=1); 
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@mixin green-gradient-border {
+    -moz-border-image: -moz-linear-gradient(top left, rgba(53, 161, 73, 1) 0%, rgba(56, 239, 126, 1) 61%, rgba(74, 255,143, 1) 100%);
+    -webkit-border-image: -webkit-linear-gradient(top left, rgba(53, 161, 73, 1) 0%, rgba(56, 239, 126, 1) 61%, rgba(74, 255,143, 1) 100%);
+    border-image: linear-gradient(to bottom right, rgba(53, 161, 73, 1) 0%, rgba(56, 239, 126, 1) 61%, rgba(74, 255,143, 1) 100%);
+    border-image-slice: 1;
 }

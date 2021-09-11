@@ -1,0 +1,37 @@
+.project-section {
+    width: 100%;
+    .project-preview-wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+        .project-preview {
+            @include center-flexbox();
+            padding: 0 20px 10px 20px;
+            background-color: white;
+            color: black;
+
+            border: 8px solid transparent;
+            @include green-gradient-border();
+
+
+            .project-title{
+                @include center-flexbox();
+            }
+
+            .project-description {
+                @include center-flexbox();
+
+                & img {
+                    max-width: 500px;
+                    width: 75%;
+                }
+            }
+
+            .project-links {
+                display: grid;
+                grid-auto-flow: column;
+                grid-gap: 20px;
+            }
+        }
+    }
+}

@@ -1,153 +1,76 @@
 .page-wrapper {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    @include center-flexbox();
+
+    -webkit-box-shadow: inset 5px 5px 1000px 5px rgba(0,0,0,0.76); 
+    box-shadow: inset 5px 5px 1000px 5px rgba(0,0,0,0.76);
+    background-color: white;
+}
+
+p {
+    font-size: 1.5em;
+    line-height: 1.5em;
 }
 
 .header-wrapper {
     @include center-flexbox();
     width: 100%;
-
-    background: url("/assets/images/heading-background.jpg");
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(67,67,67,1) 76%, rgba(67,67,67,1) 100%);
 
 
     .header-text {
         @include center-flexbox();
-        filter: brightness(200%);
-
-        flex-direction: column;
 
         h1 {
-            font-size: 3.5em;
+            font-size: 4.5em;
             margin-bottom: 15px;
-            color: $hacker-green;
+            text-align: center;
 
         }
-
         h2 {
             margin-top: 0;
             font-size: 2em;
-            color: $hacker-green;
+            text-align: center;
         }
+
+        h1, h2 {
+            @include green-gradient-text();
+          }
+    }
+}
+
+ .outer-content-wrapper{
+    width: 100%;
+    @include center-flexbox();
+
+    & > div:nth-child(2n) {
+        width: 100%;
+        @include center-flexbox();
+        background-color: $light-black;
+    }
+
+    & > div:nth-child(2n+1){
+        width: 100%;
+        @include center-flexbox();
+        background-color: white;
+        color: black;
     }
 }
 
 .content-wrapper {
     max-width: 1000px;
     padding: 10px;
+    width: 100%;
+}
 
-    .about-section {
+.social-link a{
+    font-size: 3em;
 
-        .about-content-wrapper {
-            display: grid;
-            grid-template-columns: 250px 1fr;
-            grid-gap: 20px;
-            .image-wrapper {
-
-                img {
-                    width: 250px;
-                }
-            }
-
-            .about-text {
-                
-                .social-links {
-                    display: flex;
-                    justify-content: space-between;
-
-                    .social-link {
-                        font-size: 2em;
-                    }
-                }
-            }
-        }
-
-    }
-
-    .project-wheel {
-        display: grid;
-        grid-template-columns: 1fr 5fr 1fr;
-
-        .arrow-div {
-            @include center-flexbox();
-            flex-direction: column;
-            font-size: 3em;
-        }
-
-    }
-
-    .resume-section {
-        .resume-content-wrapper {
-            @include center-flexbox();
-        }
-    }
-
-    .contact-section {
-
-        .contact-me-form {
-            margin-top: 0;
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-gap: 20px;
-
-            .email-subject {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                grid-gap: 20px;
-            }
-
-            .form-element-div {
-
-                input, textarea{
-                    font-size: 1.5em;
-                    width: 100%;
-
-                    &:focus {
-                        outline: none;
-                        border: none;
-                        box-shadow: 0 0 10px $hacker-green;
-                    }
-                }
-
-                textarea {
-                    resize: none;
-                }
-            }
-
-            #submit {
-                width: max-content;
-                font-size: 1.5em;
-                padding: 10px;
-                border-radius: 5px;
-                border: none;
-                background-color: #3a5441;
-            }
-        }
-    }
-
-    .project-section {
-        .project-preview-wrapper {
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-gap: 20px;
-
-            .project-preview {
-                border: 1px solid $hacker-green;
-                padding: 0 20px 10px 20px;
-
-                .project-title{
-                    @include center-flexbox();
-                }
-
-                .project-links {
-                    display: flex;
-                    justify-content: space-evenly;
-                    font-size: 3em;
-                }
-            }
-        }
+    & i {
+        @include green-gradient-text();
     }
 }
+
 
 .scroll {
     filter: brightness(50%);
