@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/portfolio-site/static/css/main.94c9fa27.css",
-    "main.js": "/portfolio-site/static/js/main.17adfcad.js",
-    "static/media/artemis.png": "/portfolio-site/static/media/artemis.7c1c2e5939672eb96058.png",
-    "static/media/out-of-the-dark.png": "/portfolio-site/static/media/out-of-the-dark.59b5608c6d166084806e.png",
-    "static/media/earth.jpg": "/portfolio-site/static/media/earth.a08c82a61f5bf923991e.jpg",
-    "static/media/portrait.jpg": "/portfolio-site/static/media/portrait.c15bc4f843d8bba42222.jpg",
-    "static/media/cubesat.png": "/portfolio-site/static/media/cubesat.ae7caeef32c6e5798711.png",
-    "static/media/fontawesome-webfont.svg?v=4.7.0": "/portfolio-site/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
-    "static/media/ionicons.svg?v=2.0.0": "/portfolio-site/static/media/ionicons.b45d332f6829d6813600.svg",
-    "static/media/ionicons.ttf?v=2.0.0": "/portfolio-site/static/media/ionicons.1fa6a1e8581aaedf7344.ttf",
-    "static/media/fontawesome-webfont.eot": "/portfolio-site/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
-    "static/media/fontawesome-webfont.ttf?v=4.7.0": "/portfolio-site/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
-    "static/media/ionicons.eot?v=2.0.0": "/portfolio-site/static/media/ionicons.68e3a4f9a8d8c679b4ae.eot",
-    "static/media/fontawesome-webfont.woff?v=4.7.0": "/portfolio-site/static/media/fontawesome-webfont.f691f37e57f04c152e23.woff",
-    "static/media/fontawesome-webfont.woff2?v=4.7.0": "/portfolio-site/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
-    "static/media/ionicons.woff?v=2.0.0": "/portfolio-site/static/media/ionicons.0b4ad6170d93c4aa91ee.woff",
-    "static/media/male1.png": "/portfolio-site/static/media/male1.33b5179ebc3ff05be62d.png",
-    "static/media/male.png": "/portfolio-site/static/media/male.cadeca2c10c5f440ffa7.png",
-    "index.html": "/portfolio-site/index.html",
-    "main.94c9fa27.css.map": "/portfolio-site/static/css/main.94c9fa27.css.map",
-    "main.17adfcad.js.map": "/portfolio-site/static/js/main.17adfcad.js.map"
+    "main.css": "/static/css/main.350009ad.css",
+    "main.js": "/static/js/main.bf7b8d22.js",
+    "static/media/artemis.png": "/static/media/artemis.7c1c2e5939672eb96058.png",
+    "static/media/out-of-the-dark.png": "/static/media/out-of-the-dark.59b5608c6d166084806e.png",
+    "static/media/earth.jpg": "/static/media/earth.a08c82a61f5bf923991e.jpg",
+    "static/media/portrait.jpg": "/static/media/portrait.c15bc4f843d8bba42222.jpg",
+    "static/media/cubesat.png": "/static/media/cubesat.ae7caeef32c6e5798711.png",
+    "static/media/fontawesome-webfont.svg?v=4.7.0": "/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
+    "static/media/ionicons.svg?v=2.0.0": "/static/media/ionicons.b45d332f6829d6813600.svg",
+    "static/media/ionicons.ttf?v=2.0.0": "/static/media/ionicons.1fa6a1e8581aaedf7344.ttf",
+    "static/media/fontawesome-webfont.eot": "/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
+    "static/media/fontawesome-webfont.ttf?v=4.7.0": "/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
+    "static/media/ionicons.eot?v=2.0.0": "/static/media/ionicons.68e3a4f9a8d8c679b4ae.eot",
+    "static/media/fontawesome-webfont.woff?v=4.7.0": "/static/media/fontawesome-webfont.f691f37e57f04c152e23.woff",
+    "static/media/fontawesome-webfont.woff2?v=4.7.0": "/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
+    "static/media/ionicons.woff?v=2.0.0": "/static/media/ionicons.0b4ad6170d93c4aa91ee.woff",
+    "static/media/male1.png": "/static/media/male1.33b5179ebc3ff05be62d.png",
+    "static/media/male.png": "/static/media/male.cadeca2c10c5f440ffa7.png",
+    "index.html": "/index.html",
+    "main.350009ad.css.map": "/static/css/main.350009ad.css.map",
+    "main.bf7b8d22.js.map": "/static/js/main.bf7b8d22.js.map"
   },
   "entrypoints": [
-    "static/css/main.94c9fa27.css",
-    "static/js/main.17adfcad.js"
+    "static/css/main.350009ad.css",
+    "static/js/main.bf7b8d22.js"
   ]
 }
