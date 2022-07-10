@@ -1,21 +1,34 @@
 {
   "files": {
-    "main.css": "/portfolio-site/static/css/main.b0e9b716.chunk.css",
-    "main.js": "/portfolio-site/static/js/main.ec358976.chunk.js",
-    "runtime-main.js": "/portfolio-site/static/js/runtime-main.e65663c6.js",
-    "static/js/2.192f6983.chunk.js": "/portfolio-site/static/js/2.192f6983.chunk.js",
-    "index.html": "/portfolio-site/index.html",
-    "static/js/2.192f6983.chunk.js.LICENSE.txt": "/portfolio-site/static/js/2.192f6983.chunk.js.LICENSE.txt",
-    "static/media/artemis.7c1c2e59.png": "/portfolio-site/static/media/artemis.7c1c2e59.png",
-    "static/media/cubesat.ae7caeef.png": "/portfolio-site/static/media/cubesat.ae7caeef.png",
-    "static/media/out-of-the-dark.59b5608c.png": "/portfolio-site/static/media/out-of-the-dark.59b5608c.png",
-    "static/media/portrait.c15bc4f8.jpg": "/portfolio-site/static/media/portrait.c15bc4f8.jpg",
-    "static/media/resume.c4e4cb6b.pdf": "/portfolio-site/static/media/resume.c4e4cb6b.pdf"
+    "main.css": "/static/css/main.f7327c62.chunk.css",
+    "main.js": "/static/js/main.ca88e4a7.chunk.js",
+    "main.js.map": "/static/js/main.ca88e4a7.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.7b61e083.js",
+    "runtime-main.js.map": "/static/js/runtime-main.7b61e083.js.map",
+    "static/css/2.242f24fe.chunk.css": "/static/css/2.242f24fe.chunk.css",
+    "static/js/2.624041b0.chunk.js": "/static/js/2.624041b0.chunk.js",
+    "static/js/2.624041b0.chunk.js.map": "/static/js/2.624041b0.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.ab163f2e6007e83cf991737846606a7d.js": "/precache-manifest.ab163f2e6007e83cf991737846606a7d.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.242f24fe.chunk.css.map": "/static/css/2.242f24fe.chunk.css.map",
+    "static/css/main.f7327c62.chunk.css.map": "/static/css/main.f7327c62.chunk.css.map",
+    "static/js/2.624041b0.chunk.js.LICENSE": "/static/js/2.624041b0.chunk.js.LICENSE",
+    "static/media/artemis.png": "/static/media/artemis.dc874333.png",
+    "static/media/cubesat.png": "/static/media/cubesat.f8b2d662.png",
+    "static/media/earth.jpg": "/static/media/earth.67af05e1.jpg",
+    "static/media/font-awesome.css": "/static/media/fontawesome-webfont.fee66e71.woff",
+    "static/media/ionicons.css": "/static/media/ionicons.621bd386.svg",
+    "static/media/male.png": "/static/media/male.a82ab1cd.png",
+    "static/media/male1.png": "/static/media/male1.3ec3891b.png",
+    "static/media/out-of-the-dark.png": "/static/media/out-of-the-dark.a9703379.png",
+    "static/media/portrait.jpg": "/static/media/portrait.2aec5a90.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.e65663c6.js",
-    "static/js/2.192f6983.chunk.js",
-    "static/css/main.b0e9b716.chunk.css",
-    "static/js/main.ec358976.chunk.js"
+    "static/js/runtime-main.7b61e083.js",
+    "static/css/2.242f24fe.chunk.css",
+    "static/js/2.624041b0.chunk.js",
+    "static/css/main.f7327c62.chunk.css",
+    "static/js/main.ca88e4a7.chunk.js"
   ]
 }
