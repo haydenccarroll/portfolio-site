@@ -1,0 +1,79 @@
+@mixin center-flexbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+@mixin green-gradient-text {
+    background: rgb(53,161,73);
+    background: -moz-linear-gradient(90deg, rgba(53,161,73,1) 0%, rgba(56,239,126,1) 61%, rgba(74,255,143,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(53,161,73,1) 0%, rgba(56,239,126,1) 61%, rgba(74,255,143,1) 100%);
+    background: linear-gradient(90deg, rgba(53,161,73,1) 0%, rgba(56,239,126,1) 61%, rgba(74,255,143,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#35a149",endColorstr="#4aff8f",GradientType=1); 
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@mixin green-gradient-border {
+    border-color: #21440b;
+}
+
+.portrait-photo {
+    width: 100%;
+}
+
+.section-title {
+    margin-bottom: 2em;
+    @include center-flexbox();
+    
+}
+
+.project-section {
+    width: 100%;
+    .project-preview-wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+        .project-preview {
+            font-size: 1.25rem;
+            font-weight: 300;
+            @include center-flexbox();
+            padding: 0 20px 10px 20px;
+            background-color: white;
+            color: black;
+
+            border: 8px solid transparent;
+            @include green-gradient-border();
+
+
+            .project-title{
+                @include center-flexbox();
+            }
+
+            .project-description {
+                @include center-flexbox();
+                font-size: 1.25rem;
+                font-weight: 300;
+
+                & img {
+                    max-width: 500px;
+                    width: 75%;
+                }
+            }
+
+            .project-links {
+                display: grid;
+                grid-auto-flow: column;
+                grid-gap: 30px;
+                
+                .social-link {
+                    font-size: 3em;
+                }
+            }
+        }
+    }
+}
